@@ -4,7 +4,10 @@ using System.Text;
 
 namespace Database
 {
-    class OpcoesBase
+    public class OpcoesBase : Attribute
     {
+        public bool UsarNoBancoDeDados { get; set; }
+        public bool UsarParaBuscar { get; set; }
+        public bool ChavePrimaria { get; set; }
     }
 }
