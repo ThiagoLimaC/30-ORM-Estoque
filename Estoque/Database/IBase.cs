@@ -8,5 +8,6 @@ namespace Database
     {
         void Salvar(int acao);
         List<IBase> Todos();
+        List<IBase> Busca();
     }
 }
