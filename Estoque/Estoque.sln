@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.33920.266
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{4ABAC77B-6772-49E0-A11B-168034DC6FFC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{DB82290F-D800-478D-A7F6-5C468AF7F35B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{B38D2DE8-4C07-49AC-A0C4-7A4F3948AC58}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{4ABAC77B-6772-49E0-A11B-168034DC6FFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4ABAC77B-6772-49E0-A11B-168034DC6FFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4ABAC77B-6772-49E0-A11B-168034DC6FFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB82290F-D800-478D-A7F6-5C468AF7F35B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB82290F-D800-478D-A7F6-5C468AF7F35B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB82290F-D800-478D-A7F6-5C468AF7F35B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB82290F-D800-478D-A7F6-5C468AF7F35B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B38D2DE8-4C07-49AC-A0C4-7A4F3948AC58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B38D2DE8-4C07-49AC-A0C4-7A4F3948AC58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B38D2DE8-4C07-49AC-A0C4-7A4F3948AC58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B38D2DE8-4C07-49AC-A0C4-7A4F3948AC58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
