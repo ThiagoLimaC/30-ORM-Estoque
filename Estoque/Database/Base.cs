@@ -91,5 +91,50 @@ namespace Database
                 command.ExecuteNonQuery();
             }
         }
+
+        /// <summary>
+        /// Método utilizado para capturar todos os dados de uma tabela sql e exibi-la na interface
+        /// </summary>
+        public virtual List<IBase> Todos()
+        {
+            var list = new List<IBase>();
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                string queryString = "SELECT * FROM " + this.GetType().Name;
+                SqlCommand command = new SqlCommand(queryString, connection);
+                command.Connection.Open();
+
+                ///<summary> Cria uma variável com o comando de leitura </summary>
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    ///<summary> Cria a instância do objeto com base na sua classe </summary>
+                    var obj = (IBase)Activator.CreateInstance(this.GetType());
+                    ///</summary>
+                    setProperty(ref obj, reader);
+                    list.Add(obj);
+                }
+            }
+
+            return list;
+        }
+
+        /// <summary>
+        /// Método utilizado para setar o select no SQL dentro de uma lista 
+        /// </summary>
+        /// <param name="obj"> Um objeto referenciado, ou seja, todas as alterações feitas aqui são refletidas na variável pai </param>
+        /// <param name="reader"> Variável que contém a linha SQL </param>
+        private void setProperty(ref IBase obj, SqlDataReader reader)
+        {
+            foreach (PropertyInfo pi in obj.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance))
+            {
+                OpcoesBase pOpcoesBase = (OpcoesBase)pi.GetCustomAttribute(typeof(OpcoesBase));
+                if (pOpcoesBase != null && pOpcoesBase.UsarNoBancoDeDados)
+                {
+                    ///<summary> Seta o valor contido no índice [pi.Name] para o atributo do objeto </summary>
+                    pi.SetValue(obj, reader[pi.Name].ToString());
+                }
+            }
+        }
     }
 }
