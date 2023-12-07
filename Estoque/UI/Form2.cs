@@ -177,9 +177,7 @@ namespace UI
         {
             if (this.panelMenu.Width > 200)
             {
-                panelMenu.Width = 100;
-                pictureBox1.Visible = false;
-                btnMenu.Dock = DockStyle.Top;
+                panelMenu.Width = 88;
                 foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
                 {
                     menuButton.Text = "";
@@ -189,9 +187,7 @@ namespace UI
             }
             else
             { //Expand Menu
-                panelMenu.Width = 287;
-                pictureBox1.Visible = true;
-                btnMenu.Dock = DockStyle.None;
+                panelMenu.Width = 257;
                 foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
                 {
                     menuButton.Text = "   " + menuButton.Tag.ToString();
@@ -199,6 +195,11 @@ namespace UI
                     menuButton.Padding = new Padding(10, 0, 0, 0);
                 }
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            CollapseMenu();
         }
     }
 }
