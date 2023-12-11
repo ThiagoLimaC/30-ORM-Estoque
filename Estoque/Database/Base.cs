@@ -40,27 +40,27 @@ namespace Database
         /// </summary>
         public virtual void Salvar(int acao)
         {
-            ///<summary> Utiliza uma string contendo o endereço do servidor, o nome do banco e o acesso do SQL Server </summary>
+            /// Utiliza uma string contendo o endereço do servidor, o nome do banco e o acesso do SQL Server 
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
                 List<string> valores = new List<string>();
 
-                ///<summary> Retorna o atributo da classe </summary>
+                /// Retorna o atributo da classe 
                 foreach (PropertyInfo pi in this.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance))
                 {
-                    ///<summary> Retorna as propriedades do atributo </summary>
+                    /// Retorna as propriedades do atributo 
                     OpcoesBase pOpcoesBase = (OpcoesBase)pi.GetCustomAttribute(typeof(OpcoesBase));
 
                     if (pOpcoesBase != null && pOpcoesBase.UsarNoBancoDeDados)
                     {
-                        ///<summary> Se for Double troca-se as vírgulas por pontos e retira-se os pontos marcadores de casas </summary>
+                        /// Se for Double troca-se as vírgulas por pontos e retira-se os pontos marcadores de casas 
                         if (pi.PropertyType.Name == "Double")
                         {
                             valores.Add("'" + pi.GetValue(this).ToString().Replace(".", "").Replace(",", ".") + "'");
                         }
                         else
                         {
-                            ///<summary> Pega o valor que foi inserido no atributo do objeto e o armazena em uma lista </summary>
+                            /// Pega o valor que foi inserido no atributo do objeto e o armazena em uma lista 
                             valores.Add("'" + pi.GetValue(this) + "'");
                         }
                     }
@@ -68,24 +68,24 @@ namespace Database
 
                 string queryString = string.Empty;
 
-                /// <summary> Inserir </summary>
+                /// Inserir 
                 if (acao == 1)
                 {
-                    ///<summary> Concatena a instrução de execução da procedure com os valores da lista </summary>
+                    /// Concatena a instrução de execução da procedure com os valores da lista
                     queryString = "EXEC uspGerir" + this.GetType().Name + "  1, " + string.Join(", ", valores.ToArray()) + ";";
                 }
-                /// <summary> Editar </summary>
+                /// Editar 
                 else if (acao == 2)
                 {
                     queryString = "EXEC uspGerir" + this.GetType().Name + "  2, " + string.Join(", ", valores.ToArray()) + ";";
                 }
-                /// <summary> Excluir </summary>
+                /// Excluir
                 else if (acao == 3)
                 {
                     queryString = "EXEC uspGerir" + this.GetType().Name + "  3, " + string.Join(", ", valores.ToArray()) + ";";
                 }
 
-                ///<summary> Abre a conexão com banco e executa a query </summary>
+                /// Abre a conexão com banco e executa a query 
                 SqlCommand command = new SqlCommand(queryString, connection);
                 command.Connection.Open();
                 command.ExecuteNonQuery();
@@ -104,13 +104,12 @@ namespace Database
                 SqlCommand command = new SqlCommand(queryString, connection);
                 command.Connection.Open();
 
-                ///<summary> Cria uma variável com o comando de leitura </summary>
+                /// Cria uma variável com o comando de leitura
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    ///<summary> Cria a instância do objeto com base na sua classe </summary>
+                    /// Cria a instância do objeto com base na sua classe 
                     var obj = (IBase)Activator.CreateInstance(this.GetType());
-                    ///</summary>
                     setProperty(ref obj, reader);
                     list.Add(obj);
                 }
@@ -185,7 +184,7 @@ namespace Database
                 OpcoesBase pOpcoesBase = (OpcoesBase)pi.GetCustomAttribute(typeof(OpcoesBase));
                 if (pOpcoesBase != null && pOpcoesBase.UsarNoBancoDeDados)
                 {
-                    ///<summary> Seta o valor contido no índice [pi.Name] para o atributo do objeto </summary>
+                    /// Seta o valor contido no índice [pi.Name] para o atributo do objeto
                     pi.SetValue(obj, reader[pi.Name].ToString());
                 }
             }
