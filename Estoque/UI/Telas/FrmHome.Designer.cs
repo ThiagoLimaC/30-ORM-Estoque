@@ -1,7 +1,7 @@
 ﻿
 namespace UI
 {
-    partial class Form2
+    partial class FrmHome
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace UI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHome));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.iconButton7 = new FontAwesome.Sharp.IconButton();
             this.iconButton6 = new FontAwesome.Sharp.IconButton();
@@ -289,7 +289,7 @@ namespace UI
             this.btnMaximize.IconColor = System.Drawing.Color.WhiteSmoke;
             this.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximize.IconSize = 20;
-            this.btnMaximize.Location = new System.Drawing.Point(796, 0);
+            this.btnMaximize.Location = new System.Drawing.Point(797, 0);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(45, 25);
             this.btnMaximize.TabIndex = 5;
@@ -307,7 +307,7 @@ namespace UI
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimize.IconSize = 20;
             this.btnMinimize.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnMinimize.Location = new System.Drawing.Point(751, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(752, 0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.btnMinimize.Size = new System.Drawing.Size(45, 25);
@@ -325,7 +325,7 @@ namespace UI
             this.btnClose.IconColor = System.Drawing.Color.WhiteSmoke;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 20;
-            this.btnClose.Location = new System.Drawing.Point(841, 0);
+            this.btnClose.Location = new System.Drawing.Point(842, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
             this.btnClose.Size = new System.Drawing.Size(45, 25);
@@ -353,7 +353,7 @@ namespace UI
             this.rjDropdownMenu1.PrimaryColor = System.Drawing.Color.Empty;
             this.rjDropdownMenu1.Size = new System.Drawing.Size(61, 4);
             // 
-            // Form2
+            // FrmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -361,8 +361,9 @@ namespace UI
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
-            this.Name = "Form2";
+            this.Name = "FrmHome";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.FrmHome_Load);
             this.Resize += new System.EventHandler(this.Form2_Resize);
             this.panelMenu.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
