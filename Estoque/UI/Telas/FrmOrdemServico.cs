@@ -8,16 +8,11 @@ using System.Windows.Forms;
 
 namespace UI.Telas
 {
-    public partial class FrmVenda : Form
+    public partial class FrmOrdemServico : Form
     {
-        public FrmVenda()
+        public FrmOrdemServico()
         {
             InitializeComponent();
-        }
-
-        private void FrmOrdemServico_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
