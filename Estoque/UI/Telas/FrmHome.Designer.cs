@@ -69,7 +69,7 @@ namespace UI
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.panelMenu.Size = new System.Drawing.Size(257, 520);
+            this.panelMenu.Size = new System.Drawing.Size(257, 593);
             this.panelMenu.TabIndex = 0;
             // 
             // iconButton7
@@ -84,7 +84,7 @@ namespace UI
             this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton7.IconSize = 35;
             this.iconButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton7.Location = new System.Drawing.Point(0, 456);
+            this.iconButton7.Location = new System.Drawing.Point(0, 529);
             this.iconButton7.Name = "iconButton7";
             this.iconButton7.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton7.Size = new System.Drawing.Size(257, 49);
@@ -339,7 +339,7 @@ namespace UI
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(257, 75);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(887, 445);
+            this.panelDesktop.Size = new System.Drawing.Size(887, 518);
             this.panelDesktop.TabIndex = 2;
             this.panelDesktop.Tag = "Estoque ";
             // 
@@ -357,7 +357,7 @@ namespace UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1144, 520);
+            this.ClientSize = new System.Drawing.Size(1144, 593);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
