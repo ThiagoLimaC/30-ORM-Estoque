@@ -44,6 +44,13 @@ namespace UI.Telas
             this.btnSalvar = new System.Windows.Forms.Button();
             this.cpId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgProduto)).BeginInit();
             this.SuspendLayout();
@@ -90,7 +97,7 @@ namespace UI.Telas
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(28, 156);
+            this.label3.Location = new System.Drawing.Point(28, 162);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 25);
             this.label3.TabIndex = 5;
@@ -108,7 +115,7 @@ namespace UI.Telas
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label6.Location = new System.Drawing.Point(28, 118);
+            this.label6.Location = new System.Drawing.Point(28, 113);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(374, 38);
             this.label6.TabIndex = 9;
@@ -119,7 +126,7 @@ namespace UI.Telas
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(28, 92);
+            this.label7.Location = new System.Drawing.Point(28, 87);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(192, 26);
             this.label7.TabIndex = 10;
@@ -165,12 +172,13 @@ namespace UI.Telas
             // dgProduto
             // 
             this.dgProduto.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgProduto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgProduto.Location = new System.Drawing.Point(419, 325);
+            this.dgProduto.Location = new System.Drawing.Point(441, 199);
             this.dgProduto.Name = "dgProduto";
             this.dgProduto.RowHeadersWidth = 51;
             this.dgProduto.RowTemplate.Height = 29;
-            this.dgProduto.Size = new System.Drawing.Size(607, 188);
+            this.dgProduto.Size = new System.Drawing.Size(546, 255);
             this.dgProduto.TabIndex = 15;
             // 
             // btnSalvar
@@ -178,7 +186,7 @@ namespace UI.Telas
             this.btnSalvar.BackColor = System.Drawing.Color.White;
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnSalvar.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSalvar.Location = new System.Drawing.Point(28, 472);
+            this.btnSalvar.Location = new System.Drawing.Point(28, 475);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(95, 41);
             this.btnSalvar.TabIndex = 16;
@@ -199,11 +207,101 @@ namespace UI.Telas
             this.cpNome.Name = "cpNome";
             this.cpNome.Width = 125;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(441, 21);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(234, 26);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Pesquisar um produto:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label9.Location = new System.Drawing.Point(441, 47);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(541, 19);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "Para pesquisar um produto cadastro insira o código de identificação (ID):\r\n";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(441, 75);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(430, 27);
+            this.textBox1.TabIndex = 20;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Font = new System.Drawing.Font("Yu Gothic UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.iconButton1.IconColor = System.Drawing.SystemColors.WindowFrame;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 20;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(877, 75);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.iconButton1.Size = new System.Drawing.Size(102, 27);
+            this.iconButton1.TabIndex = 21;
+            this.iconButton1.Text = "Pesquisar";
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.radioButton1.Location = new System.Drawing.Point(441, 113);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(75, 27);
+            this.radioButton1.TabIndex = 22;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Editar";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.radioButton2.Location = new System.Drawing.Point(546, 113);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(81, 27);
+            this.radioButton2.TabIndex = 23;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Excluir";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label10.Location = new System.Drawing.Point(441, 153);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(546, 38);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Após selecionar o produto referente a ação escolhida os dados do mesmo\r\nficaram d" +
+    "isponíveis para edição na aba Dados do Produto (lado esquerdo)";
+            // 
             // FrmProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1038, 528);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.iconButton1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.dgProduto);
             this.Controls.Add(this.txtDescricao);
@@ -220,6 +318,7 @@ namespace UI.Telas
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmProduto";
             this.Text = "FrmProduto";
+            this.Load += new System.EventHandler(this.FrmProduto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgProduto)).EndInit();
             this.ResumeLayout(false);
@@ -244,5 +343,12 @@ namespace UI.Telas
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.DataGridViewTextBoxColumn cpId;
         private System.Windows.Forms.DataGridViewTextBoxColumn cpNome;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox1;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.Label label10;
     }
 }

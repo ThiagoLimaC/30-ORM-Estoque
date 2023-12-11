@@ -14,5 +14,10 @@ namespace UI.Telas
         {
             InitializeComponent();
         }
+
+        private void FrmProduto_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
