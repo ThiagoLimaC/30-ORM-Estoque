@@ -13,9 +13,10 @@ namespace UI
 {
     public partial class FrmHome : Form
     {
-        //Fields
+        //Campos 
         private int borderSize = 2;
-        private Size formSize; //Keep form size when it is minimized and restored.Since the form is resized because it takes into account the size of the title bar and borders.
+        private Size formSize; //Mantém o tamanho do form mesmo se ele for maximizado ou minimizado
+                               
 
         //Forms
         FrmProduto FrmP;
@@ -23,13 +24,13 @@ namespace UI
         FrmVenda FrmV;
         FrmOrdemServico FrmOS;
 
-        //Constructor 
+        //Construtor
         public FrmHome()
         {
             InitializeComponent();
             CollapseMenu();
-            this.Padding = new Padding(borderSize);// Border size
-            this.BackColor = Color.FromArgb(35, 63, 102);// Border color
+            this.Padding = new Padding(borderSize); // Tamanho das bordas
+            this.BackColor = Color.FromArgb(35, 63, 102); // Cor de Fundo
 
             //Create instance
             this.FrmP = new FrmProduto();
