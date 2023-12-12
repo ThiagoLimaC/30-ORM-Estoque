@@ -291,10 +291,10 @@ namespace UI.Telas
             this.label10.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label10.Location = new System.Drawing.Point(441, 153);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(546, 38);
+            this.label10.Size = new System.Drawing.Size(545, 38);
             this.label10.TabIndex = 24;
             this.label10.Text = "Após selecionar o produto referente a ação escolhida os dados do mesmo\r\nficaram d" +
-    "isponíveis para edição na aba Dados do Produto (lado esquerdo)";
+    "isponíveis para edição na aba Dados do produto (lado esquerdo)";
             // 
             // panel1
             // 

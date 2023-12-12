@@ -29,7 +29,6 @@ namespace UI
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHome));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.iconButton7 = new FontAwesome.Sharp.IconButton();
@@ -48,7 +47,6 @@ namespace UI
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.rjDropdownMenu1 = new RJCodeAdvance.RJControls.RJDropdownMenu(this.components);
             this.panelMenu.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -343,16 +341,6 @@ namespace UI
             this.panelDesktop.TabIndex = 2;
             this.panelDesktop.Tag = "Estoque ";
             // 
-            // rjDropdownMenu1
-            // 
-            this.rjDropdownMenu1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.rjDropdownMenu1.IsMainMenu = false;
-            this.rjDropdownMenu1.MenuItemHeight = 25;
-            this.rjDropdownMenu1.MenuItemTextColor = System.Drawing.Color.Empty;
-            this.rjDropdownMenu1.Name = "rjDropdownMenu1";
-            this.rjDropdownMenu1.PrimaryColor = System.Drawing.Color.Empty;
-            this.rjDropdownMenu1.Size = new System.Drawing.Size(61, 4);
-            // 
             // FrmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -394,6 +382,5 @@ namespace UI
         private System.Windows.Forms.Label label3;
         private FontAwesome.Sharp.IconButton btnMaximize;
         private FontAwesome.Sharp.IconButton btnMinimize;
-        private RJCodeAdvance.RJControls.RJDropdownMenu rjDropdownMenu1;
     }
 }
