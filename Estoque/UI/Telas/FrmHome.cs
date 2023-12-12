@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
+using UI.Telas;
 
 namespace UI
 {
@@ -16,6 +17,12 @@ namespace UI
         private int borderSize = 2;
         private Size formSize; //Keep form size when it is minimized and restored.Since the form is resized because it takes into account the size of the title bar and borders.
 
+        //Forms
+        FrmProduto FrmP;
+        FrmCliente FrmC;
+        FrmVenda FrmV;
+        FrmOrdemServico FrmOS;
+
         //Constructor 
         public FrmHome()
         {
@@ -23,6 +30,12 @@ namespace UI
             CollapseMenu();
             this.Padding = new Padding(borderSize);// Border size
             this.BackColor = Color.FromArgb(35, 63, 102);// Border color
+
+            //Create instance
+            this.FrmP = new FrmProduto();
+            this.FrmC = new FrmCliente();
+            this.FrmV = new FrmVenda();
+            this.FrmOS = new FrmOrdemServico();
         }
 
         //Drag Form
@@ -199,7 +212,12 @@ namespace UI
 
         private void FrmHome_Load(object sender, EventArgs e)
         {
-
+            panelDesktop.Controls.Clear();
+            FrmP.TopLevel = false;
+            FrmP.TopMost = false;
+            FrmP.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(FrmP);
+            FrmP.Show();
         }
     }
 }
