@@ -41,7 +41,7 @@ namespace UI.Telas
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dgProduto = new System.Windows.Forms.DataGridView();
-            this.btnSalvar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.cpId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label8 = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@ namespace UI.Telas
             this.rbExcluir = new System.Windows.Forms.RadioButton();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgProduto)).BeginInit();
             this.panel1.SuspendLayout();
@@ -186,17 +186,12 @@ namespace UI.Telas
             this.dgProduto.Size = new System.Drawing.Size(546, 255);
             this.dgProduto.TabIndex = 15;
             // 
-            // btnSalvar
+            // button1
             // 
-            this.btnSalvar.BackColor = System.Drawing.Color.White;
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnSalvar.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSalvar.Location = new System.Drawing.Point(28, 475);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(95, 41);
-            this.btnSalvar.TabIndex = 16;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 26;
             // 
             // cpId
             // 
@@ -298,7 +293,7 @@ namespace UI.Telas
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnSalvar);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.rbExcluir);
             this.panel1.Controls.Add(this.rbEditar);
@@ -324,17 +319,18 @@ namespace UI.Telas
             this.panel1.Size = new System.Drawing.Size(1038, 528);
             this.panel1.TabIndex = 25;
             // 
-            // button1
+            // btnSalvar
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(28, 475);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(374, 30);
-            this.button1.TabIndex = 38;
-            this.button1.Text = "Salvar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSalvar.BackColor = System.Drawing.Color.White;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalvar.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSalvar.Location = new System.Drawing.Point(28, 475);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(374, 30);
+            this.btnSalvar.TabIndex = 38;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // FrmProduto
             // 
@@ -343,7 +339,7 @@ namespace UI.Telas
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1038, 528);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmProduto";
             this.Text = "FrmProduto";
@@ -370,7 +366,7 @@ namespace UI.Telas
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgProduto;
-        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn cpId;
         private System.Windows.Forms.DataGridViewTextBoxColumn cpNome;
         private System.Windows.Forms.Label label8;
@@ -381,6 +377,6 @@ namespace UI.Telas
         private System.Windows.Forms.RadioButton rbExcluir;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSalvar;
     }
 }
