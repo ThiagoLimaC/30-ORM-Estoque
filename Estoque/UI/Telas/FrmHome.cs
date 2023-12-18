@@ -42,12 +42,7 @@ namespace UI
         //Form Load
         private void FrmHome_Load(object sender, EventArgs e)
         {
-            //panelDesktop.Controls.Clear();
-            //FrmP.TopLevel = false;
-            //FrmP.TopMost = false;
-            //FrmP.Dock = DockStyle.Fill;
-            //panelDesktop.Controls.Add(FrmP);
-            //FrmP.Show();
+
         }
 
         //Drag Form
@@ -222,9 +217,15 @@ namespace UI
             CollapseMenu();
         }
 
+        // Show Forms methods 
         private void btnFrmProduto_Click(object sender, EventArgs e)
         {
-
+            panelDesktop.Controls.Clear();
+            FrmP.TopLevel = false;
+            FrmP.TopMost = false;
+            FrmP.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(FrmP);
+            FrmP.Show();
         }
     }
 }
