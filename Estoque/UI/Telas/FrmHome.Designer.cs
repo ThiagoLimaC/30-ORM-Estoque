@@ -36,10 +36,10 @@ namespace UI
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.btnFrmProduto = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnLogo = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,7 +49,7 @@ namespace UI
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogo)).BeginInit();
             this.panelTitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,7 +61,7 @@ namespace UI
             this.panelMenu.Controls.Add(this.iconButton5);
             this.panelMenu.Controls.Add(this.iconButton4);
             this.panelMenu.Controls.Add(this.iconButton3);
-            this.panelMenu.Controls.Add(this.iconButton2);
+            this.panelMenu.Controls.Add(this.btnFrmProduto);
             this.panelMenu.Controls.Add(this.panel4);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
@@ -185,33 +185,34 @@ namespace UI
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseVisualStyleBackColor = true;
             // 
-            // iconButton2
+            // btnFrmProduto
             // 
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.iconButton2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Computer;
-            this.iconButton2.IconColor = System.Drawing.Color.WhiteSmoke;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 45;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(0, 117);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton2.Size = new System.Drawing.Size(257, 56);
-            this.iconButton2.TabIndex = 1;
-            this.iconButton2.Tag = "Produto";
-            this.iconButton2.Text = "    Produto";
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = true;
+            this.btnFrmProduto.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFrmProduto.FlatAppearance.BorderSize = 0;
+            this.btnFrmProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFrmProduto.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnFrmProduto.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnFrmProduto.IconChar = FontAwesome.Sharp.IconChar.Computer;
+            this.btnFrmProduto.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.btnFrmProduto.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFrmProduto.IconSize = 45;
+            this.btnFrmProduto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFrmProduto.Location = new System.Drawing.Point(0, 117);
+            this.btnFrmProduto.Name = "btnFrmProduto";
+            this.btnFrmProduto.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnFrmProduto.Size = new System.Drawing.Size(257, 56);
+            this.btnFrmProduto.TabIndex = 1;
+            this.btnFrmProduto.Tag = "Produto";
+            this.btnFrmProduto.Text = "    Produto";
+            this.btnFrmProduto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFrmProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFrmProduto.UseVisualStyleBackColor = true;
+            this.btnFrmProduto.Click += new System.EventHandler(this.btnFrmProduto_Click);
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.pictureBox1);
+            this.panel4.Controls.Add(this.btnLogo);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
@@ -230,16 +231,17 @@ namespace UI
             this.label1.TabIndex = 1;
             this.label1.Text = "MyStock";
             // 
-            // pictureBox1
+            // btnLogo
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.btnLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogo.Image = ((System.Drawing.Image)(resources.GetObject("btnLogo.Image")));
+            this.btnLogo.Location = new System.Drawing.Point(12, 20);
+            this.btnLogo.Name = "btnLogo";
+            this.btnLogo.Size = new System.Drawing.Size(60, 60);
+            this.btnLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnLogo.TabIndex = 0;
+            this.btnLogo.TabStop = false;
+            this.btnLogo.Click += new System.EventHandler(this.btnLogo_Click);
             // 
             // label2
             // 
@@ -356,7 +358,7 @@ namespace UI
             this.panelMenu.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogo)).EndInit();
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             this.ResumeLayout(false);
@@ -368,7 +370,7 @@ namespace UI
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox btnLogo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Panel panelDesktop;
@@ -377,7 +379,7 @@ namespace UI
         private FontAwesome.Sharp.IconButton iconButton5;
         private FontAwesome.Sharp.IconButton iconButton4;
         private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton btnFrmProduto;
         private FontAwesome.Sharp.IconButton btnClose;
         private System.Windows.Forms.Label label3;
         private FontAwesome.Sharp.IconButton btnMaximize;

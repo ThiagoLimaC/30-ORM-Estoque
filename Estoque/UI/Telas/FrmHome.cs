@@ -39,6 +39,17 @@ namespace UI
             this.FrmOS = new FrmOrdemServico();
         }
 
+        //Form Load
+        private void FrmHome_Load(object sender, EventArgs e)
+        {
+            //panelDesktop.Controls.Clear();
+            //FrmP.TopLevel = false;
+            //FrmP.TopMost = false;
+            //FrmP.Dock = DockStyle.Fill;
+            //panelDesktop.Controls.Add(FrmP);
+            //FrmP.Show();
+        }
+
         //Drag Form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -206,19 +217,14 @@ namespace UI
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void btnLogo_Click(object sender, EventArgs e)
         {
             CollapseMenu();
         }
 
-        private void FrmHome_Load(object sender, EventArgs e)
+        private void btnFrmProduto_Click(object sender, EventArgs e)
         {
-            panelDesktop.Controls.Clear();
-            FrmP.TopLevel = false;
-            FrmP.TopMost = false;
-            FrmP.Dock = DockStyle.Fill;
-            panelDesktop.Controls.Add(FrmP);
-            FrmP.Show();
+
         }
     }
 }
