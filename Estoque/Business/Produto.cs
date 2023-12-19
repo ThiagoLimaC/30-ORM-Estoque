@@ -16,7 +16,7 @@ namespace Business
         [OpcoesBase(UsarNoBancoDeDados = true)]
         public string Descricao { get; set; }
 
-        [OpcoesBase(UsarNoBancoDeDados = true, ChavePrimaria = true, UsarParaBuscar = true)]
+        [OpcoesBase(UsarNoBancoDeDados = true)]
         public decimal Valor { get; set; }
     }
 }

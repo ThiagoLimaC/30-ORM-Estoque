@@ -136,25 +136,11 @@ namespace Database
                         if (pOpcoesBase.ChavePrimaria && pOpcoesBase.UsarParaBuscar)
                         {
                             chavePrimaria = pi.Name;
-
-                            if (pi.GetValue(this).ToString() == idBuscar)
-                            {
-                                var valor = pi.GetValue(this);
-                                if (valor != null)
-                                {
-                                    where.Add(pi.Name + " = '" + valor + "'");
-                                }
-                            }
                         }
                     }
                 }
 
-                string queryString = "SELECT * FROM " + this.GetType().Name + " WHERE " + chavePrimaria + " IS NOT NULL";
-
-                if (where.Count > 0)
-                {
-                    queryString += " AND " + string.Join(" AND ", where.ToArray());
-                }
+                string queryString = "SELECT * FROM " + this.GetType().Name + " WHERE " + chavePrimaria + " IS NOT NULL AND " + chavePrimaria + " = '" + idBuscar + "';";
 
                 SqlCommand command = new SqlCommand(queryString, connection);
                 command.Connection.Open();
