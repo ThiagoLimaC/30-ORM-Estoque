@@ -47,13 +47,29 @@ namespace UI.Telas
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.splitter1 = new System.Windows.Forms.Splitter();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtPreco = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.rbExcluir = new System.Windows.Forms.RadioButton();
+            this.rbEditar = new System.Windows.Forms.RadioButton();
+            this.label13 = new System.Windows.Forms.Label();
+            this.dgProduto = new System.Windows.Forms.DataGridView();
             this.pnlMenu.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panelDesktop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgProduto)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -299,9 +315,9 @@ namespace UI.Telas
             this.label6.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label6.Location = new System.Drawing.Point(6, 101);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(333, 34);
+            this.label6.Size = new System.Drawing.Size(360, 34);
             this.label6.TabIndex = 11;
-            this.label6.Text = "Para cadastrar um novo produto insira seus dados\r\nnos campos abaixo:";
+            this.label6.Text = "Para cadastrar um novo produto insira seus dados nos\r\ncampos abaixo:";
             // 
             // label7
             // 
@@ -316,37 +332,218 @@ namespace UI.Telas
             // 
             // panelDesktop
             // 
+            this.panelDesktop.Controls.Add(this.dgProduto);
+            this.panelDesktop.Controls.Add(this.label13);
+            this.panelDesktop.Controls.Add(this.rbExcluir);
+            this.panelDesktop.Controls.Add(this.rbEditar);
+            this.panelDesktop.Controls.Add(this.iconButton1);
+            this.panelDesktop.Controls.Add(this.textBox1);
+            this.panelDesktop.Controls.Add(this.label12);
+            this.panelDesktop.Controls.Add(this.label11);
+            this.panelDesktop.Controls.Add(this.btnSalvar);
+            this.panelDesktop.Controls.Add(this.txtDescricao);
+            this.panelDesktop.Controls.Add(this.label10);
+            this.panelDesktop.Controls.Add(this.txtNome);
+            this.panelDesktop.Controls.Add(this.label9);
+            this.panelDesktop.Controls.Add(this.txtPreco);
+            this.panelDesktop.Controls.Add(this.label8);
+            this.panelDesktop.Controls.Add(this.txtId);
             this.panelDesktop.Controls.Add(this.label5);
             this.panelDesktop.Controls.Add(this.label7);
             this.panelDesktop.Controls.Add(this.label6);
             this.panelDesktop.Controls.Add(this.label4);
             this.panelDesktop.Controls.Add(this.label3);
             this.panelDesktop.Controls.Add(this.iconPictureBox1);
-            this.panelDesktop.Controls.Add(this.splitter1);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(250, 0);
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(765, 503);
             this.panelDesktop.TabIndex = 1;
             // 
-            // splitter1
-            // 
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(382, 503);
-            this.splitter1.TabIndex = 8;
-            this.splitter1.TabStop = false;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Yu Gothic UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(6, 150);
+            this.label5.Location = new System.Drawing.Point(10, 135);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(39, 25);
             this.label5.TabIndex = 13;
             this.label5.Text = "ID: ";
+            // 
+            // txtId
+            // 
+            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtId.Location = new System.Drawing.Point(10, 163);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(161, 27);
+            this.txtId.TabIndex = 14;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Yu Gothic UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(183, 135);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(63, 25);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Preço:";
+            // 
+            // txtPreco
+            // 
+            this.txtPreco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPreco.Location = new System.Drawing.Point(183, 163);
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.Size = new System.Drawing.Size(183, 27);
+            this.txtPreco.TabIndex = 16;
+            // 
+            // txtNome
+            // 
+            this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNome.Location = new System.Drawing.Point(10, 238);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(356, 27);
+            this.txtNome.TabIndex = 18;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Yu Gothic UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(10, 207);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(67, 25);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "Nome:";
+            // 
+            // txtDescricao
+            // 
+            this.txtDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDescricao.Location = new System.Drawing.Point(10, 310);
+            this.txtDescricao.Multiline = true;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(356, 110);
+            this.txtDescricao.TabIndex = 20;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Yu Gothic UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(10, 279);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(95, 25);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "Descrição:";
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.BackColor = System.Drawing.Color.White;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalvar.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSalvar.Location = new System.Drawing.Point(10, 439);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(356, 30);
+            this.btnSalvar.TabIndex = 39;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(391, 17);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(198, 22);
+            this.label11.TabIndex = 40;
+            this.label11.Text = "Pesquisar um produto:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Yu Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label12.Location = new System.Drawing.Point(391, 42);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(358, 34);
+            this.label12.TabIndex = 41;
+            this.label12.Text = "Para pesquisar um produto cadastrado insira o código\r\nde identificação (ID):\r\n";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Location = new System.Drawing.Point(391, 79);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(250, 27);
+            this.textBox1.TabIndex = 42;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Font = new System.Drawing.Font("Yu Gothic UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.iconButton1.IconColor = System.Drawing.SystemColors.WindowFrame;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 20;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(647, 79);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.iconButton1.Size = new System.Drawing.Size(102, 27);
+            this.iconButton1.TabIndex = 43;
+            this.iconButton1.Text = "Pesquisar";
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            // 
+            // rbExcluir
+            // 
+            this.rbExcluir.AutoSize = true;
+            this.rbExcluir.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rbExcluir.Location = new System.Drawing.Point(489, 123);
+            this.rbExcluir.Name = "rbExcluir";
+            this.rbExcluir.Size = new System.Drawing.Size(81, 27);
+            this.rbExcluir.TabIndex = 45;
+            this.rbExcluir.TabStop = true;
+            this.rbExcluir.Text = "Excluir";
+            this.rbExcluir.UseVisualStyleBackColor = true;
+            // 
+            // rbEditar
+            // 
+            this.rbEditar.AutoSize = true;
+            this.rbEditar.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rbEditar.Location = new System.Drawing.Point(391, 123);
+            this.rbEditar.Name = "rbEditar";
+            this.rbEditar.Size = new System.Drawing.Size(75, 27);
+            this.rbEditar.TabIndex = 44;
+            this.rbEditar.TabStop = true;
+            this.rbEditar.Text = "Editar";
+            this.rbEditar.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label13.Location = new System.Drawing.Point(391, 163);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(367, 76);
+            this.label13.TabIndex = 46;
+            this.label13.Text = "Após selecionar o produto referente a ação esco-\r\nlhida os dados do mesmoficaram " +
+    "disponíveis pa-\r\nra edição na aba Dados do produto (lado esquer-\r\ndo)";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // dgProduto
+            // 
+            this.dgProduto.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgProduto.Location = new System.Drawing.Point(391, 248);
+            this.dgProduto.Name = "dgProduto";
+            this.dgProduto.RowHeadersWidth = 51;
+            this.dgProduto.RowTemplate.Height = 29;
+            this.dgProduto.Size = new System.Drawing.Size(358, 221);
+            this.dgProduto.TabIndex = 47;
             // 
             // FrmHome1
             // 
@@ -356,6 +553,8 @@ namespace UI.Telas
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.pnlMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximumSize = new System.Drawing.Size(1033, 550);
+            this.MinimumSize = new System.Drawing.Size(1033, 550);
             this.Name = "FrmHome1";
             this.Text = "FrmHome1";
             this.pnlMenu.ResumeLayout(false);
@@ -365,6 +564,7 @@ namespace UI.Telas
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.panelDesktop.ResumeLayout(false);
             this.panelDesktop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgProduto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -388,7 +588,22 @@ namespace UI.Telas
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panelDesktop;
-        private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtPreco;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtDescricao;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox1;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.RadioButton rbExcluir;
+        private System.Windows.Forms.RadioButton rbEditar;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DataGridView dgProduto;
     }
 }
