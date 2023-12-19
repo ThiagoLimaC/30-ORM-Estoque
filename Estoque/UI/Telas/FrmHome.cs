@@ -227,5 +227,10 @@ namespace UI
             panelDesktop.Controls.Add(FrmP);
             FrmP.Show();
         }
+
+        private void panelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
