@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace UI.Telas
 {
-    public partial class FrmHome1 : Form
+    public partial class FrmHome : Form
     {
-        public FrmHome1()
+        public FrmHome()
         {
             InitializeComponent();
         }
