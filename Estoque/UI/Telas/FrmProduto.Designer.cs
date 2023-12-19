@@ -142,6 +142,7 @@ namespace UI.Telas
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(765, 503);
             this.panelDesktop.TabIndex = 22;
+            this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
             // 
             // dgProduto
             // 
@@ -305,9 +306,9 @@ namespace UI.Telas
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(183, 135);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 25);
+            this.label8.Size = new System.Drawing.Size(59, 25);
             this.label8.TabIndex = 15;
-            this.label8.Text = "Preço:";
+            this.label8.Text = "Valor:";
             // 
             // txtId
             // 

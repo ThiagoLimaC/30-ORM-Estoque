@@ -23,7 +23,7 @@ namespace Database
                 case "Int64":
                     return "BIGINT";
                 case "Double":
-                    return "DECIMAL(9,2)";
+                    return "NUMERIC(12,2)";
                 case "Single":
                     return "FLOAT";
                 case "DateTime":

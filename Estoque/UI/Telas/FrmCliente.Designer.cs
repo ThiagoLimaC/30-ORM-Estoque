@@ -32,7 +32,7 @@ namespace UI.Telas
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.dgProduto = new System.Windows.Forms.DataGridView();
+            this.dgCliente = new System.Windows.Forms.DataGridView();
             this.label13 = new System.Windows.Forms.Label();
             this.rbExcluir = new System.Windows.Forms.RadioButton();
             this.rbEditar = new System.Windows.Forms.RadioButton();
@@ -53,7 +53,7 @@ namespace UI.Telas
             this.label3 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panelDesktop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgProduto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +62,7 @@ namespace UI.Telas
             this.panelDesktop.BackColor = System.Drawing.SystemColors.Control;
             this.panelDesktop.Controls.Add(this.txtTelefone);
             this.panelDesktop.Controls.Add(this.label10);
-            this.panelDesktop.Controls.Add(this.dgProduto);
+            this.panelDesktop.Controls.Add(this.dgCliente);
             this.panelDesktop.Controls.Add(this.label13);
             this.panelDesktop.Controls.Add(this.rbExcluir);
             this.panelDesktop.Controls.Add(this.rbEditar);
@@ -107,16 +107,16 @@ namespace UI.Telas
             this.label10.TabIndex = 48;
             this.label10.Text = "Telefone:";
             // 
-            // dgProduto
+            // dgCliente
             // 
-            this.dgProduto.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgProduto.Location = new System.Drawing.Point(391, 248);
-            this.dgProduto.Name = "dgProduto";
-            this.dgProduto.RowHeadersWidth = 51;
-            this.dgProduto.RowTemplate.Height = 29;
-            this.dgProduto.Size = new System.Drawing.Size(358, 243);
-            this.dgProduto.TabIndex = 47;
+            this.dgCliente.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgCliente.Location = new System.Drawing.Point(391, 248);
+            this.dgCliente.Name = "dgCliente";
+            this.dgCliente.RowHeadersWidth = 51;
+            this.dgCliente.RowTemplate.Height = 29;
+            this.dgCliente.Size = new System.Drawing.Size(358, 243);
+            this.dgCliente.TabIndex = 47;
             // 
             // label13
             // 
@@ -346,7 +346,7 @@ namespace UI.Telas
             this.Text = "FrmCliente";
             this.panelDesktop.ResumeLayout(false);
             this.panelDesktop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgProduto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgCliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -357,7 +357,7 @@ namespace UI.Telas
         private System.Windows.Forms.Panel panelDesktop;
         private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DataGridView dgProduto;
+        private System.Windows.Forms.DataGridView dgCliente;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.RadioButton rbExcluir;
         private System.Windows.Forms.RadioButton rbEditar;

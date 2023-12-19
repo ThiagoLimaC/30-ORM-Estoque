@@ -53,5 +53,10 @@ namespace UI.Telas
 
             MessageBox.Show("Produto cadastrado com sucesso!");
         }
+
+        private void panelDesktop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

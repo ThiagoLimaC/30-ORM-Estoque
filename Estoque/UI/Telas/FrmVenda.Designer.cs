@@ -34,7 +34,7 @@ namespace UI.Telas
             this.label9 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.dgProduto = new System.Windows.Forms.DataGridView();
+            this.gbVenda = new System.Windows.Forms.DataGridView();
             this.label13 = new System.Windows.Forms.Label();
             this.rbExcluir = new System.Windows.Forms.RadioButton();
             this.rbEditar = new System.Windows.Forms.RadioButton();
@@ -53,7 +53,7 @@ namespace UI.Telas
             this.label3 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panelDesktop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgProduto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbVenda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +63,7 @@ namespace UI.Telas
             this.panelDesktop.Controls.Add(this.label9);
             this.panelDesktop.Controls.Add(this.textBox3);
             this.panelDesktop.Controls.Add(this.label10);
-            this.panelDesktop.Controls.Add(this.dgProduto);
+            this.panelDesktop.Controls.Add(this.gbVenda);
             this.panelDesktop.Controls.Add(this.label13);
             this.panelDesktop.Controls.Add(this.rbExcluir);
             this.panelDesktop.Controls.Add(this.rbEditar);
@@ -125,16 +125,16 @@ namespace UI.Telas
             this.label10.TabIndex = 48;
             this.label10.Text = "Data da venda:";
             // 
-            // dgProduto
+            // gbVenda
             // 
-            this.dgProduto.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgProduto.Location = new System.Drawing.Point(391, 248);
-            this.dgProduto.Name = "dgProduto";
-            this.dgProduto.RowHeadersWidth = 51;
-            this.dgProduto.RowTemplate.Height = 29;
-            this.dgProduto.Size = new System.Drawing.Size(358, 243);
-            this.dgProduto.TabIndex = 47;
+            this.gbVenda.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.gbVenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gbVenda.Location = new System.Drawing.Point(391, 248);
+            this.gbVenda.Name = "gbVenda";
+            this.gbVenda.RowHeadersWidth = 51;
+            this.gbVenda.RowTemplate.Height = 29;
+            this.gbVenda.Size = new System.Drawing.Size(358, 243);
+            this.gbVenda.TabIndex = 47;
             // 
             // label13
             // 
@@ -346,7 +346,7 @@ namespace UI.Telas
             this.Load += new System.EventHandler(this.FrmOrdemServico_Load);
             this.panelDesktop.ResumeLayout(false);
             this.panelDesktop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgProduto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbVenda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -359,7 +359,7 @@ namespace UI.Telas
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DataGridView dgProduto;
+        private System.Windows.Forms.DataGridView gbVenda;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.RadioButton rbExcluir;
         private System.Windows.Forms.RadioButton rbEditar;
