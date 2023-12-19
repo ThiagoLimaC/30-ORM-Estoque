@@ -35,8 +35,8 @@ namespace UI.Telas
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.txtPreco = new System.Windows.Forms.MaskedTextBox();
             this.dgProduto = new System.Windows.Forms.DataGridView();
+            this.txtPreco = new System.Windows.Forms.MaskedTextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.rbExcluir = new System.Windows.Forms.RadioButton();
             this.rbEditar = new System.Windows.Forms.RadioButton();
@@ -115,8 +115,8 @@ namespace UI.Telas
             // 
             // panelDesktop
             // 
-            this.panelDesktop.Controls.Add(this.txtPreco);
             this.panelDesktop.Controls.Add(this.dgProduto);
+            this.panelDesktop.Controls.Add(this.txtPreco);
             this.panelDesktop.Controls.Add(this.label13);
             this.panelDesktop.Controls.Add(this.rbExcluir);
             this.panelDesktop.Controls.Add(this.rbEditar);
@@ -143,6 +143,16 @@ namespace UI.Telas
             this.panelDesktop.Size = new System.Drawing.Size(765, 503);
             this.panelDesktop.TabIndex = 22;
             // 
+            // dgProduto
+            // 
+            this.dgProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgProduto.Location = new System.Drawing.Point(395, 254);
+            this.dgProduto.Name = "dgProduto";
+            this.dgProduto.RowHeadersWidth = 51;
+            this.dgProduto.RowTemplate.Height = 29;
+            this.dgProduto.Size = new System.Drawing.Size(353, 226);
+            this.dgProduto.TabIndex = 49;
+            // 
             // txtPreco
             // 
             this.txtPreco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -152,17 +162,6 @@ namespace UI.Telas
             this.txtPreco.Size = new System.Drawing.Size(173, 27);
             this.txtPreco.TabIndex = 48;
             this.txtPreco.ValidatingType = typeof(int);
-            // 
-            // dgProduto
-            // 
-            this.dgProduto.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgProduto.Location = new System.Drawing.Point(391, 248);
-            this.dgProduto.Name = "dgProduto";
-            this.dgProduto.RowHeadersWidth = 51;
-            this.dgProduto.RowTemplate.Height = 29;
-            this.dgProduto.Size = new System.Drawing.Size(358, 243);
-            this.dgProduto.TabIndex = 47;
             // 
             // label13
             // 
@@ -421,7 +420,6 @@ namespace UI.Telas
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelDesktop;
-        private System.Windows.Forms.DataGridView dgProduto;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.RadioButton rbExcluir;
         private System.Windows.Forms.RadioButton rbEditar;
@@ -443,5 +441,6 @@ namespace UI.Telas
         private System.Windows.Forms.Label label3;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.MaskedTextBox txtPreco;
+        private System.Windows.Forms.DataGridView dgProduto;
     }
 }
