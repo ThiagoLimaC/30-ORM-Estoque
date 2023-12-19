@@ -47,7 +47,7 @@ namespace UI.Telas
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.dgProduto = new System.Windows.Forms.DataGridView();
+            this.dgOrdemServico = new System.Windows.Forms.DataGridView();
             this.label13 = new System.Windows.Forms.Label();
             this.rbExcluir = new System.Windows.Forms.RadioButton();
             this.rbEditar = new System.Windows.Forms.RadioButton();
@@ -62,12 +62,14 @@ namespace UI.Telas
             this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.pnlMenu.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panelDesktop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgProduto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgOrdemServico)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -272,7 +274,7 @@ namespace UI.Telas
             // 
             this.iconPictureBox1.BackColor = System.Drawing.Color.White;
             this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.BoxesAlt;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.CheckSquare;
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox1.IconSize = 50;
@@ -290,9 +292,9 @@ namespace UI.Telas
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label3.Location = new System.Drawing.Point(62, 12);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 31);
+            this.label3.Size = new System.Drawing.Size(204, 31);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Estoque";
+            this.label3.Text = "Ordem de Serviço";
             // 
             // label4
             // 
@@ -313,9 +315,9 @@ namespace UI.Telas
             this.label6.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label6.Location = new System.Drawing.Point(6, 101);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(360, 34);
+            this.label6.Size = new System.Drawing.Size(359, 34);
             this.label6.TabIndex = 11;
-            this.label6.Text = "Para cadastrar um novo produto insira seus dados nos\r\ncampos abaixo:";
+            this.label6.Text = "Para cadastrar uma nova ordem de serviço insira seus\r\ndados nos campos abaixo:";
             // 
             // label7
             // 
@@ -324,15 +326,17 @@ namespace UI.Telas
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(6, 79);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(161, 22);
+            this.label7.Size = new System.Drawing.Size(238, 22);
             this.label7.TabIndex = 12;
-            this.label7.Text = "Dados do registro:";
+            this.label7.Text = "Dados da ordem de serviço:";
             // 
             // panelDesktop
             // 
+            this.panelDesktop.Controls.Add(this.textBox3);
+            this.panelDesktop.Controls.Add(this.label10);
             this.panelDesktop.Controls.Add(this.textBox2);
             this.panelDesktop.Controls.Add(this.label9);
-            this.panelDesktop.Controls.Add(this.dgProduto);
+            this.panelDesktop.Controls.Add(this.dgOrdemServico);
             this.panelDesktop.Controls.Add(this.label13);
             this.panelDesktop.Controls.Add(this.rbExcluir);
             this.panelDesktop.Controls.Add(this.rbEditar);
@@ -356,16 +360,16 @@ namespace UI.Telas
             this.panelDesktop.Size = new System.Drawing.Size(765, 503);
             this.panelDesktop.TabIndex = 1;
             // 
-            // dgProduto
+            // dgOrdemServico
             // 
-            this.dgProduto.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgProduto.Location = new System.Drawing.Point(391, 248);
-            this.dgProduto.Name = "dgProduto";
-            this.dgProduto.RowHeadersWidth = 51;
-            this.dgProduto.RowTemplate.Height = 29;
-            this.dgProduto.Size = new System.Drawing.Size(358, 243);
-            this.dgProduto.TabIndex = 47;
+            this.dgOrdemServico.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgOrdemServico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgOrdemServico.Location = new System.Drawing.Point(391, 248);
+            this.dgOrdemServico.Name = "dgOrdemServico";
+            this.dgOrdemServico.RowHeadersWidth = 51;
+            this.dgOrdemServico.RowTemplate.Height = 29;
+            this.dgOrdemServico.Size = new System.Drawing.Size(358, 243);
+            this.dgOrdemServico.TabIndex = 47;
             // 
             // label13
             // 
@@ -374,10 +378,10 @@ namespace UI.Telas
             this.label13.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label13.Location = new System.Drawing.Point(391, 163);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(367, 76);
+            this.label13.Size = new System.Drawing.Size(357, 76);
             this.label13.TabIndex = 46;
-            this.label13.Text = "Após selecionar o produto referente a ação esco-\r\nlhida os dados do mesmo ficaram" +
-    " disponíveis pa-\r\nra edição na aba Dados do registro (lado esquer-\r\ndo)";
+            this.label13.Text = "Após selecionar a ordem de serviço referente a\r\nação escolhida os dados do mesmo " +
+    "ficaram dis-\r\nponíveis para edição na aba Dados do registro \r\n(lado esquerdo)";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // rbExcluir
@@ -437,9 +441,10 @@ namespace UI.Telas
             this.label12.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label12.Location = new System.Drawing.Point(391, 42);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(358, 34);
+            this.label12.Size = new System.Drawing.Size(368, 34);
             this.label12.TabIndex = 41;
-            this.label12.Text = "Para pesquisar um produto cadastrado insira o código\r\nde identificação (ID):\r\n";
+            this.label12.Text = "Para pesquisar uma ordem de serviço cadastrada insira\r\no código de identificação " +
+    "(ID):\r\n";
             // 
             // label11
             // 
@@ -448,16 +453,16 @@ namespace UI.Telas
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(391, 17);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(198, 22);
+            this.label11.Size = new System.Drawing.Size(285, 22);
             this.label11.TabIndex = 40;
-            this.label11.Text = "Pesquisar um produto:";
+            this.label11.Text = "Pesquisar uma ordem de serviço:";
             // 
             // btnSalvar
             // 
             this.btnSalvar.BackColor = System.Drawing.Color.White;
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalvar.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSalvar.Location = new System.Drawing.Point(10, 393);
+            this.btnSalvar.Location = new System.Drawing.Point(10, 439);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(356, 52);
             this.btnSalvar.TabIndex = 39;
@@ -479,9 +484,9 @@ namespace UI.Telas
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(183, 150);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(114, 25);
+            this.label8.Size = new System.Drawing.Size(122, 25);
             this.label8.TabIndex = 15;
-            this.label8.Text = "Quantidade:";
+            this.label8.Text = "ID do cliente:";
             // 
             // txtId
             // 
@@ -507,7 +512,7 @@ namespace UI.Telas
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Yu Gothic UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(10, 222);
+            this.label9.Location = new System.Drawing.Point(10, 278);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(112, 25);
             this.label9.TabIndex = 48;
@@ -516,11 +521,30 @@ namespace UI.Telas
             // textBox2
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(10, 250);
+            this.textBox2.Location = new System.Drawing.Point(9, 306);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(356, 137);
+            this.textBox2.Size = new System.Drawing.Size(356, 112);
             this.textBox2.TabIndex = 49;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Yu Gothic UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(10, 214);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(139, 25);
+            this.label10.TabIndex = 50;
+            this.label10.Text = "Data da ordem:";
+            // 
+            // textBox3
+            // 
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox3.Location = new System.Drawing.Point(10, 242);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(161, 27);
+            this.textBox3.TabIndex = 51;
             // 
             // FrmHome
             // 
@@ -541,7 +565,7 @@ namespace UI.Telas
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.panelDesktop.ResumeLayout(false);
             this.panelDesktop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgProduto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgOrdemServico)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -577,8 +601,10 @@ namespace UI.Telas
         private System.Windows.Forms.RadioButton rbExcluir;
         private System.Windows.Forms.RadioButton rbEditar;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DataGridView dgProduto;
+        private System.Windows.Forms.DataGridView dgOrdemServico;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label10;
     }
 }
