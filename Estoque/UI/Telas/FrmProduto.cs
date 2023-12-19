@@ -11,7 +11,7 @@ namespace UI.Telas
 {
     public partial class FrmProduto : Form
     {
-        // Constructor
+        // Construtor
         public FrmProduto()
         {
             InitializeComponent();
@@ -23,12 +23,13 @@ namespace UI.Telas
             LoadAll();
         }
 
-        // Private Methods
+        // Métodos privados
 
         private void LimparCampos()
         {
             txtId.Text = string.Empty;
             txtNome.Text = string.Empty;
+            txtPreco.Text = string.Empty;
             txtDescricao.Text = string.Empty;
         }
 
@@ -44,6 +45,10 @@ namespace UI.Telas
 
             produto.IdProd = txtId.Text;
             produto.Nome = txtNome.Text;
+
+            var preco = txtPreco.Text.Replace("R$","");
+            produto.Valor = Double.Parse(preco);
+
             produto.Descricao = txtDescricao.Text;
 
             produto.Salvar(1);
@@ -52,11 +57,6 @@ namespace UI.Telas
             LoadAll();
 
             MessageBox.Show("Produto cadastrado com sucesso!");
-        }
-
-        private void panelDesktop_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

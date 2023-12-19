@@ -35,6 +35,7 @@ namespace UI.Telas
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.txtPreco = new System.Windows.Forms.MaskedTextBox();
             this.dgProduto = new System.Windows.Forms.DataGridView();
             this.label13 = new System.Windows.Forms.Label();
             this.rbExcluir = new System.Windows.Forms.RadioButton();
@@ -48,7 +49,6 @@ namespace UI.Telas
             this.label10 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtPreco = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -115,6 +115,7 @@ namespace UI.Telas
             // 
             // panelDesktop
             // 
+            this.panelDesktop.Controls.Add(this.txtPreco);
             this.panelDesktop.Controls.Add(this.dgProduto);
             this.panelDesktop.Controls.Add(this.label13);
             this.panelDesktop.Controls.Add(this.rbExcluir);
@@ -128,7 +129,6 @@ namespace UI.Telas
             this.panelDesktop.Controls.Add(this.label10);
             this.panelDesktop.Controls.Add(this.txtNome);
             this.panelDesktop.Controls.Add(this.label9);
-            this.panelDesktop.Controls.Add(this.txtPreco);
             this.panelDesktop.Controls.Add(this.label8);
             this.panelDesktop.Controls.Add(this.txtId);
             this.panelDesktop.Controls.Add(this.label5);
@@ -142,7 +142,16 @@ namespace UI.Telas
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(765, 503);
             this.panelDesktop.TabIndex = 22;
-            this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
+            // 
+            // txtPreco
+            // 
+            this.txtPreco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPreco.Location = new System.Drawing.Point(193, 163);
+            this.txtPreco.Mask = "$000,00";
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.Size = new System.Drawing.Size(173, 27);
+            this.txtPreco.TabIndex = 48;
+            this.txtPreco.ValidatingType = typeof(int);
             // 
             // dgProduto
             // 
@@ -251,6 +260,7 @@ namespace UI.Telas
             this.btnSalvar.TabIndex = 39;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // txtDescricao
             // 
@@ -290,14 +300,6 @@ namespace UI.Telas
             this.label9.Size = new System.Drawing.Size(67, 25);
             this.label9.TabIndex = 17;
             this.label9.Text = "Nome:";
-            // 
-            // txtPreco
-            // 
-            this.txtPreco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPreco.Location = new System.Drawing.Point(183, 163);
-            this.txtPreco.Name = "txtPreco";
-            this.txtPreco.Size = new System.Drawing.Size(183, 27);
-            this.txtPreco.TabIndex = 16;
             // 
             // label8
             // 
@@ -432,7 +434,6 @@ namespace UI.Telas
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtPreco;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label5;
@@ -441,5 +442,6 @@ namespace UI.Telas
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.MaskedTextBox txtPreco;
     }
 }
