@@ -118,14 +118,14 @@ namespace Database
             return list;
         }
 
-        public virtual List<IBase> Busca()
+        public virtual List<IBase> Busca(string idBuscar)
         {
             var list = new List<IBase>();
 
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
-                List<string> where = new List<string>();
                 string chavePrimaria = string.Empty;
+                List<string> where = new List<string>();
 
                 foreach (PropertyInfo pi in this.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance))
                 {
@@ -133,17 +133,17 @@ namespace Database
 
                     if (pOpcoesBase != null)
                     {
-                        if (pOpcoesBase.ChavePrimaria)
+                        if (pOpcoesBase.ChavePrimaria && pOpcoesBase.UsarParaBuscar)
                         {
                             chavePrimaria = pi.Name;
-                        }
 
-                        if (pOpcoesBase.UsarParaBuscar)
-                        {
-                            var valor = pi.GetValue(this);
-                            if (valor != null)
+                            if (pi.GetValue(this).ToString() == idBuscar)
                             {
-                                where.Add(pi.Name + " = '" + valor + "'");
+                                var valor = pi.GetValue(this);
+                                if (valor != null)
+                                {
+                                    where.Add(pi.Name + " = '" + valor + "'");
+                                }
                             }
                         }
                     }

@@ -80,5 +80,16 @@ namespace UI.Telas
 
             MessageBox.Show("Produto cadastrado com sucesso!");
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            var produto = new Produto().Busca(txtPesquisar.Text);
+            dgProduto.DataSource = produto;
+        }
+
+        private void txtPesquisar_KeyUp(object sender, KeyEventArgs e)
+        {
+
+        }
     }
 }

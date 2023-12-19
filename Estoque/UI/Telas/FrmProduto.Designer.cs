@@ -40,8 +40,8 @@ namespace UI.Telas
             this.label13 = new System.Windows.Forms.Label();
             this.rbExcluir = new System.Windows.Forms.RadioButton();
             this.rbEditar = new System.Windows.Forms.RadioButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnPesquisar = new FontAwesome.Sharp.IconButton();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -120,8 +120,8 @@ namespace UI.Telas
             this.panelDesktop.Controls.Add(this.label13);
             this.panelDesktop.Controls.Add(this.rbExcluir);
             this.panelDesktop.Controls.Add(this.rbEditar);
-            this.panelDesktop.Controls.Add(this.iconButton2);
-            this.panelDesktop.Controls.Add(this.textBox1);
+            this.panelDesktop.Controls.Add(this.btnPesquisar);
+            this.panelDesktop.Controls.Add(this.txtPesquisar);
             this.panelDesktop.Controls.Add(this.label12);
             this.panelDesktop.Controls.Add(this.label11);
             this.panelDesktop.Controls.Add(this.btnSalvar);
@@ -200,31 +200,33 @@ namespace UI.Telas
             this.rbEditar.Text = "Editar";
             this.rbEditar.UseVisualStyleBackColor = true;
             // 
-            // iconButton2
+            // btnPesquisar
             // 
-            this.iconButton2.Font = new System.Drawing.Font("Yu Gothic UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.iconButton2.IconColor = System.Drawing.SystemColors.WindowFrame;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 20;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(647, 79);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.iconButton2.Size = new System.Drawing.Size(102, 27);
-            this.iconButton2.TabIndex = 43;
-            this.iconButton2.Text = "Pesquisar";
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Font = new System.Drawing.Font("Yu Gothic UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPesquisar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnPesquisar.IconColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnPesquisar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPesquisar.IconSize = 20;
+            this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPesquisar.Location = new System.Drawing.Point(647, 79);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnPesquisar.Size = new System.Drawing.Size(102, 27);
+            this.btnPesquisar.TabIndex = 43;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
-            // textBox1
+            // txtPesquisar
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(391, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 27);
-            this.textBox1.TabIndex = 42;
+            this.txtPesquisar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPesquisar.Location = new System.Drawing.Point(391, 79);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(250, 27);
+            this.txtPesquisar.TabIndex = 42;
+            this.txtPesquisar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPesquisar_KeyUp);
             // 
             // label12
             // 
@@ -423,8 +425,8 @@ namespace UI.Telas
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.RadioButton rbExcluir;
         private System.Windows.Forms.RadioButton rbEditar;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private System.Windows.Forms.TextBox textBox1;
+        private FontAwesome.Sharp.IconButton btnPesquisar;
+        private System.Windows.Forms.TextBox txtPesquisar;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnSalvar;
