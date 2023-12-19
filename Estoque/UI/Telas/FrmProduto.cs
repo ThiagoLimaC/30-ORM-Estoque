@@ -41,13 +41,14 @@ namespace UI.Telas
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+
             var produto = new Produto();
 
             produto.IdProd = txtId.Text;
             produto.Nome = txtNome.Text;
 
-            var preco = txtPreco.Text.Replace("R$","");
-            produto.Valor = Double.Parse(preco);
+            var preco = txtPreco.Text.Replace("R$","").Replace(".", ",");
+            produto.Valor = Decimal.Parse(preco);
 
             produto.Descricao = txtDescricao.Text;
 

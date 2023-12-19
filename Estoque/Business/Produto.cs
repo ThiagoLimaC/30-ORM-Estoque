@@ -10,13 +10,13 @@ namespace Business
         [OpcoesBase(UsarNoBancoDeDados = true, ChavePrimaria = true, UsarParaBuscar = true)]
         public string IdProd { get; set; }
 
-        [OpcoesBase(UsarNoBancoDeDados = true, ChavePrimaria = true, UsarParaBuscar = true)]
-        public double Valor { get; set; }
-
         [OpcoesBase(UsarNoBancoDeDados = true)]
         public string Nome { get; set; }
 
         [OpcoesBase(UsarNoBancoDeDados = true)]
         public string Descricao { get; set; }
+
+        [OpcoesBase(UsarNoBancoDeDados = true, ChavePrimaria = true, UsarParaBuscar = true)]
+        public decimal Valor { get; set; }
     }
 }

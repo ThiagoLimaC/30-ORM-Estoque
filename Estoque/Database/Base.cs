@@ -54,9 +54,9 @@ namespace Database
                     if (pOpcoesBase != null && pOpcoesBase.UsarNoBancoDeDados)
                     {
                         /// Se for Double troca-se as vírgulas por pontos e retira-se os pontos marcadores de casas 
-                        if (pi.PropertyType.Name == "Double")
+                        if (pi.PropertyType.Name == "Decimal")
                         {
-                            valores.Add("'" + pi.GetValue(this).ToString().Replace(".", "").Replace(",", ".") + "'");
+                            valores.Add(" " + pi.GetValue(this).ToString().Replace(".", "").Replace(",", "."));
                         }
                         else
                         {
@@ -185,7 +185,7 @@ namespace Database
                 if (pOpcoesBase != null && pOpcoesBase.UsarNoBancoDeDados)
                 {
                     /// Seta o valor contido no índice [pi.Name] para o atributo do objeto
-                    pi.SetValue(obj, reader[pi.Name].ToString());
+                    pi.SetValue(obj, reader[pi.Name]);
                 }
             }
         }
