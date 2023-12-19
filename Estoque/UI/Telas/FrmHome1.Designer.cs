@@ -444,7 +444,7 @@ namespace UI.Telas
             this.btnSalvar.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSalvar.Location = new System.Drawing.Point(10, 439);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(356, 30);
+            this.btnSalvar.Size = new System.Drawing.Size(356, 52);
             this.btnSalvar.TabIndex = 39;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
@@ -542,7 +542,7 @@ namespace UI.Telas
             this.dgProduto.Name = "dgProduto";
             this.dgProduto.RowHeadersWidth = 51;
             this.dgProduto.RowTemplate.Height = 29;
-            this.dgProduto.Size = new System.Drawing.Size(358, 221);
+            this.dgProduto.Size = new System.Drawing.Size(358, 243);
             this.dgProduto.TabIndex = 47;
             // 
             // FrmHome1
