@@ -124,23 +124,23 @@ namespace Database
 
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
-                string chavePrimaria = string.Empty;
-                List<string> where = new List<string>();
+                //string chavePrimaria = string.Empty;
+                //List<string> where = new List<string>();
 
-                foreach (PropertyInfo pi in this.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance))
-                {
-                    OpcoesBase pOpcoesBase = (OpcoesBase)pi.GetCustomAttribute(typeof(OpcoesBase));
+                //foreach (PropertyInfo pi in this.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance))
+                //{
+                //    OpcoesBase pOpcoesBase = (OpcoesBase)pi.GetCustomAttribute(typeof(OpcoesBase));
 
-                    if (pOpcoesBase != null)
-                    {
-                        if (pOpcoesBase.ChavePrimaria && pOpcoesBase.UsarParaBuscar)
-                        {
-                            chavePrimaria = pi.Name;
-                        }
-                    }
-                }
+                //    if (pOpcoesBase != null)
+                //    {
+                //        if (pOpcoesBase.ChavePrimaria && pOpcoesBase.UsarParaBuscar)
+                //        {
+                //            chavePrimaria = pi.Name;
+                //        }
+                //    }
+                //}
 
-                string queryString = "SELECT * FROM " + this.GetType().Name + " WHERE " + chavePrimaria + " IS NOT NULL AND " + chavePrimaria + " = '" + idBuscar + "';";
+                string queryString = "EXEC usp_BuscarId" + this.GetType().Name + " '" + idBuscar + "';";
 
                 SqlCommand command = new SqlCommand(queryString, connection);
                 command.Connection.Open();

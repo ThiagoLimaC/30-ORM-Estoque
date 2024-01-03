@@ -83,20 +83,22 @@ namespace UI.Telas
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            var produto = new Produto().Busca(txtPesquisar.Text);
+            dgProduto.Rows.Clear();
 
-            foreach (var p in produto)
+            var p = new Produto().Busca(txtPesquisar.Text);
+
+            foreach (Produto prod in new Produto().Busca(txtPesquisar.Text))
             {
                 string[] row1 = new string[]
                 {
-                    
+                    prod.IdProd,
+                    prod.Nome,
+                    prod.Descricao,
+                    "R$ " + prod.Valor.ToString()
                 };
+
+                dgProduto.Rows.Add(row1);
             }
-
-            
-
-
-            dgProduto.Rows.Add();
         }
 
         private void txtPesquisar_KeyUp(object sender, KeyEventArgs e)

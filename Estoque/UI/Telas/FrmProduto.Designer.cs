@@ -150,7 +150,7 @@ namespace UI.Telas
             this.dgProduto.Name = "dgProduto";
             this.dgProduto.RowHeadersWidth = 51;
             this.dgProduto.RowTemplate.Height = 29;
-            this.dgProduto.Size = new System.Drawing.Size(353, 226);
+            this.dgProduto.Size = new System.Drawing.Size(353, 237);
             this.dgProduto.TabIndex = 49;
             // 
             // txtPreco
