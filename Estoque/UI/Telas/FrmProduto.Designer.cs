@@ -152,6 +152,7 @@ namespace UI.Telas
             this.dgProduto.RowTemplate.Height = 29;
             this.dgProduto.Size = new System.Drawing.Size(353, 237);
             this.dgProduto.TabIndex = 49;
+            this.dgProduto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProduto_CellClick);
             // 
             // txtPreco
             // 

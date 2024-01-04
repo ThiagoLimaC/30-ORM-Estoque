@@ -85,8 +85,6 @@ namespace UI.Telas
         {
             dgProduto.Rows.Clear();
 
-            var p = new Produto().Busca(txtPesquisar.Text);
-
             foreach (Produto prod in new Produto().Busca(txtPesquisar.Text))
             {
                 string[] row1 = new string[]
@@ -104,6 +102,27 @@ namespace UI.Telas
         private void txtPesquisar_KeyUp(object sender, KeyEventArgs e)
         {
 
+        }
+
+        private void dgProduto_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var prod = new Produto();
+
+            foreach (DataGridViewRow row in dgProduto.Rows)
+            {
+
+                prod.IdProd = row.Cells["ID"].Value.ToString();
+                prod.Nome = row.Cells["Nome"].Value.ToString();
+                prod.Descricao = row.Cells["Descrição"].Value.ToString();
+                prod.Valor = Convert.ToDecimal(row.Cells["Valor"].Value);
+            }
+
+            txtId.Text = prod.IdProd;
+            txtNome.Text = prod.Nome;
+            txtDescricao.Text = prod.Descricao;
+            txtPreco.Text = prod.Valor.ToString();
+
+            btnSalvar.Text = "Alterar";
         }
     }
 }
