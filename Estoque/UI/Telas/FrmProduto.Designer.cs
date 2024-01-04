@@ -36,7 +36,7 @@ namespace UI.Telas
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.dgProduto = new System.Windows.Forms.DataGridView();
-            this.txtPreco = new System.Windows.Forms.MaskedTextBox();
+            this.txtValor = new System.Windows.Forms.MaskedTextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.rbExcluir = new System.Windows.Forms.RadioButton();
             this.rbEditar = new System.Windows.Forms.RadioButton();
@@ -116,7 +116,7 @@ namespace UI.Telas
             // panelDesktop
             // 
             this.panelDesktop.Controls.Add(this.dgProduto);
-            this.panelDesktop.Controls.Add(this.txtPreco);
+            this.panelDesktop.Controls.Add(this.txtValor);
             this.panelDesktop.Controls.Add(this.label13);
             this.panelDesktop.Controls.Add(this.rbExcluir);
             this.panelDesktop.Controls.Add(this.rbEditar);
@@ -154,15 +154,15 @@ namespace UI.Telas
             this.dgProduto.TabIndex = 49;
             this.dgProduto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProduto_CellClick);
             // 
-            // txtPreco
+            // txtValor
             // 
-            this.txtPreco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPreco.Location = new System.Drawing.Point(193, 163);
-            this.txtPreco.Mask = "$000,00";
-            this.txtPreco.Name = "txtPreco";
-            this.txtPreco.Size = new System.Drawing.Size(173, 27);
-            this.txtPreco.TabIndex = 48;
-            this.txtPreco.ValidatingType = typeof(int);
+            this.txtValor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtValor.Location = new System.Drawing.Point(193, 163);
+            this.txtValor.Mask = "$000,00";
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(173, 27);
+            this.txtValor.TabIndex = 48;
+            this.txtValor.ValidatingType = typeof(int);
             // 
             // label13
             // 
@@ -443,7 +443,7 @@ namespace UI.Telas
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private System.Windows.Forms.MaskedTextBox txtPreco;
+        private System.Windows.Forms.MaskedTextBox txtValor;
         private System.Windows.Forms.DataGridView dgProduto;
     }
 }

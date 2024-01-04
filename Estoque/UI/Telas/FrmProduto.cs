@@ -20,7 +20,7 @@ namespace UI.Telas
         // Form Load
         private void FrmProduto_Load(object sender, EventArgs e)
         {
-            LoadAll();
+             LoadAll();
         }
 
         // Métodos privados
@@ -29,7 +29,7 @@ namespace UI.Telas
         {
             txtId.Text = string.Empty;
             txtNome.Text = string.Empty;
-            txtPreco.Text = string.Empty;
+            txtValor.Text = string.Empty;
             txtDescricao.Text = string.Empty;
         }
 
@@ -68,13 +68,18 @@ namespace UI.Telas
             produto.IdProd = txtId.Text;
             produto.Nome = txtNome.Text;
 
-            var preco = txtPreco.Text.Replace("R$","").Replace(".", ",");
+            var preco = txtValor.Text.Replace("R$","").Replace(".", ",");
             produto.Valor = Decimal.Parse(preco);
 
             produto.Descricao = txtDescricao.Text;
 
-            produto.Salvar(1);
+            if (btnSalvar.Text == "Alterar")
+            {
+                produto.Salvar(2);
+                btnSalvar.Text = "Salvar";
+            }
 
+            produto.Salvar(1);
             LimparCampos();
             LoadAll();
 
@@ -110,17 +115,23 @@ namespace UI.Telas
 
             foreach (DataGridViewRow row in dgProduto.Rows)
             {
+                if (row != null && row.Index == 0)
+                {
+                    prod.IdProd = row.Cells["ID"].Value.ToString();
+                    prod.Nome = row.Cells["Nome"].Value.ToString();
+                    prod.Descricao = row.Cells["Descrição"].Value.ToString();
 
-                prod.IdProd = row.Cells["ID"].Value.ToString();
-                prod.Nome = row.Cells["Nome"].Value.ToString();
-                prod.Descricao = row.Cells["Descrição"].Value.ToString();
-                prod.Valor = Convert.ToDecimal(row.Cells["Valor"].Value);
+                    var p = row.Cells["Valor"].Value.ToString();
+                    prod.Valor = Convert.ToDecimal(p.Replace("R$", ""));
+
+                    break;
+                }
             }
 
             txtId.Text = prod.IdProd;
             txtNome.Text = prod.Nome;
             txtDescricao.Text = prod.Descricao;
-            txtPreco.Text = prod.Valor.ToString();
+            txtValor.Text = prod.Valor.ToString();
 
             btnSalvar.Text = "Alterar";
         }
