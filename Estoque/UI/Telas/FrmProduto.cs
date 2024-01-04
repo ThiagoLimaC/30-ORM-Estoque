@@ -35,29 +35,35 @@ namespace UI.Telas
 
         private void LoadAll()
         {
-            dgProduto.ColumnCount = 4;
-            dgProduto.Columns[0].Name = "ID";
-            dgProduto.Columns[1].Name = "Nome";
-            dgProduto.Columns[2].Name = "Descrição";
-            dgProduto.Columns[3].Name = "Valor";
+            dgProduto.Rows.Clear();
+            dgProduto.AutoGenerateColumns = false;
 
-            var rows = new List<string[]>();
+            dgProduto.DataSource = new Produto().Todos();
 
-            foreach (Produto prod in new Produto().Todos())
-            {
-                string[] row1 = new string[]
-                {
-                    prod.IdProd,
-                    prod.Nome,
-                    prod.Descricao,
-                    "R$ " + prod.Valor.ToString()
-                };
-                rows.Add(row1);
-                foreach (string[] rowArray in rows)
-                {
-                    dgProduto.Rows.Add(rowArray);
-                }
-            }
+            //dgProduto.ColumnCount = 4;
+            //dgProduto.Columns[0].Name = "ID";
+            //dgProduto.Columns[1].Name = "Nome";
+            //dgProduto.Columns[2].Name = "Descrição";
+            //dgProduto.Columns[3].Name = "Valor";
+
+            //var rows = new List<string[]>();
+
+            //foreach (Produto prod in new Produto().Todos())
+            //{
+            //    string[] row1 = new string[]
+            //    {
+            //        prod.IdProd,
+            //        prod.Nome,
+            //        prod.Descricao,
+            //        "R$ " + prod.Valor.ToString()
+            //    };
+            //    rows.Add(row1);
+
+            //    foreach (string[] rowArray in rows)
+            //    {
+            //        dgProduto.Rows.Add(rowArray);
+            //    }
+            //}
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
